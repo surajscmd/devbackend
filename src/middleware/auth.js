@@ -7,7 +7,7 @@ const { token } = req.cookies;
 if (!token) {
     return res.status(401).send("Please login");
 }
-const decodedObject = await jwt.verify(token, "Dev@mysecreat", );
+const decodedObject = await jwt.verify(token, process.env.JWT_SECRET,);
 const { _id } = decodedObject;
 console.log("Logged in user is: " + _id);
 const user = await User.findById(_id); 
