@@ -51,7 +51,6 @@ const userSchema = new mongoose.Schema({
              throw new Error("url is not valid");
             }
          }
-    
         },
     about: {
         type: String,
@@ -69,7 +68,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: "Free",
     },   
-    
 },{
     timestamps:true,
 });
